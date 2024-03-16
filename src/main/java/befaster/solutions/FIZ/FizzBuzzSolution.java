@@ -13,12 +13,21 @@ public class FizzBuzzSolution {
         if(isFizz &&  isBuzz && isDeluxe){
           return "fizz buzz deluxe";
       }
+       else if(isFizz &&  isBuzz && isFakeDeluxe){
+            return "fizz buzz fake deluxe";
+        }
       else if (isFizz && isDeluxe){
           return "fizz deluxe";
       }
       else if (isBuzz && isDeluxe) {
           return "buzz deluxe";
       }
+        else if (isFizz && isFakeDeluxe){
+            return "fizz fake deluxe";
+        }
+        else if (isBuzz && isFakeDeluxe) {
+            return "buzz fake deluxe";
+        }
       else if (isFizz && isBuzz) {
           return "fizz buzz";
       }
@@ -51,5 +60,6 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
