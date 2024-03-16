@@ -7,8 +7,12 @@ public class FizzBuzzSolution {
     public String fizzBuzz(Integer number) {
        boolean isFizz = number % 3 ==0 || String.valueOf(number).contains("3");
        boolean isBuzz = number % 5 ==0 || String.valueOf(number).contains("5");
-       boolean isDeluxe = number > 10 && digitsAreIdentical(number) && number % 2 == 0;
-        boolean isFakeDeluxe = number > 10 && digitsAreIdentical(number) && number % 2 != 0;
+       boolean isDeluxe = ((number % 3 ==0 && String.valueOf(number).contains("3")) ||
+        (number % 5 ==0 || String.valueOf(number).contains("5"))   )
+               && number % 2 == 0;
+        boolean isFakeDeluxe = ((number % 3 ==0 && String.valueOf(number).contains("3")) ||
+                (number % 5 ==0 || String.valueOf(number).contains("5"))   )
+                && number % 2 != 0;
 
         if(isFizz &&  isBuzz && isDeluxe){
           return "fizz buzz deluxe";
@@ -60,6 +64,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
