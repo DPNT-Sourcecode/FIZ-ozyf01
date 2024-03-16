@@ -8,10 +8,10 @@ public class FizzBuzzSolution {
        boolean isFizz = number % 3 ==0 || String.valueOf(number).contains("3");
        boolean isBuzz = number % 5 ==0 || String.valueOf(number).contains("5");
        boolean isDeluxe = ((number % 3 ==0 && String.valueOf(number).contains("3")) ||
-        (number % 5 ==0 || String.valueOf(number).contains("5"))   )
+        (number % 5 ==0 && String.valueOf(number).contains("5"))   )
                && number % 2 == 0;
         boolean isFakeDeluxe = ((number % 3 ==0 && String.valueOf(number).contains("3")) ||
-                (number % 5 ==0 || String.valueOf(number).contains("5"))   )
+                (number % 5 ==0 && String.valueOf(number).contains("5"))   )
                 && number % 2 != 0;
 
         if(isFizz &&  isBuzz && isDeluxe){
@@ -64,7 +64,3 @@ public class FizzBuzzSolution {
     }
 
 }
-
-
-
-
